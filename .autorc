@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "npm",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "DeDevsClub",
+  "repo": "design-registry-starter",
+  "name": "V Alexander",
+  "email": "buns@dedevs.club"
+}
