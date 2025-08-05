@@ -7,7 +7,7 @@ type PoweredByProps = {
 
 // const getHostname = (url: string) => {
 //   if (url.startsWith('/')) {
-//     return new URL(url, 'https://devcn-ui.dedevs.com').hostname.replace('www.', '');
+//     return new URL(url, 'https://devcn.dedevs.com').hostname.replace('www.', '');
 //   }
 
 //   const parsedUrl = new URL(url);

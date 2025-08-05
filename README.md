@@ -7,24 +7,26 @@ This starter kit provides everything you need to create, maintain, and distribut
 ## 🌟 Why Use This Starter Kit?
 
 ### **For Component Library Authors**
-- **Zero-config setup**: Get a fully functional registry in minutes
-- **shadcn/ui compatibility**: Leverage the existing ecosystem and tooling
-- **Automated workflows**: Component discovery, registry generation, and publishing
-- **Professional documentation**: Built-in docs site with live examples
-- **CLI distribution**: Publish your own `npx your-registry add component` CLI
+
+* **Zero-config setup**: Get a fully functional registry in minutes
+* **shadcn/ui compatibility**: Leverage the existing ecosystem and tooling
+* **Automated workflows**: Component discovery, registry generation, and publishing
+* **Professional documentation**: Built-in docs site with live examples
+* **CLI distribution**: Publish your own `npx your-registry add component` CLI
 
 ### **For Development Teams**
-- **Consistent design system**: Maintain design consistency across projects
-- **Easy adoption**: Developers can add components with a single command
-- **Version control**: Track component changes and updates
-- **Customization**: Full control over component implementations
+
+* **Consistent design system**: Maintain design consistency across projects
+* **Easy adoption**: Developers can add components with a single command
+* **Version control**: Track component changes and updates
+* **Customization**: Full control over component implementations
 
 ## 🏗️ Architecture Overview
 
 This monorepo is built with **Turborepo** and follows a modular architecture:
 
 ```
-design-registry-starter/
+devcn-ui/
 ├── apps/
 │   └── docs/                    # Next.js documentation site
 │       ├── app/                 # App router pages
@@ -58,16 +60,16 @@ design-registry-starter/
 
 ### Prerequisites
 
-- **Node.js** 18+ and **pnpm** (recommended)
-- **Git** for version control
-- **GitHub account** for repository hosting
+* **Node.js** 18+ and **pnpm** (recommended)
+* **Git** for version control
+* **GitHub account** for repository hosting
 
 ### 1. Clone and Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/design-registry-starter.git
-cd design-registry-starter
+git clone https://github.com/your-username/devcn-ui.git
+cd devcn-ui
 
 # Install dependencies
 pnpm install
@@ -137,6 +139,7 @@ packages/your-component/
 #### 2. Component Package Structure
 
 **`package.json`**:
+
 ```json
 {
   "name": "@repo/your-component",
@@ -148,6 +151,7 @@ packages/your-component/
 ```
 
 **`src/index.tsx`**:
+
 ```tsx
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -182,6 +186,7 @@ pnpm run registry
 ```
 
 This command will:
+
 1. Scan all packages for component files
 2. Generate the `registry.json` file with proper shadcn/ui schema
 3. Build individual component JSON files in `public/r/`
@@ -203,11 +208,11 @@ pnpm run build:registry
 
 The automated system:
 
-- **Scans `packages/` directory**: Automatically discovers all TypeScript/TSX component files
-- **Excludes config packages**: Ignores `eslint-config`, `typescript-config`, and `shadcn-ui` packages
-- **Handles AI components**: Special logic for the `ai` package to create individual registry entries
-- **Generates descriptions**: Maps component names to meaningful descriptions
-- **Creates proper schema**: Follows the official shadcn/ui registry format
+* **Scans `packages/` directory**: Automatically discovers all TypeScript/TSX component files
+* **Excludes config packages**: Ignores `eslint-config`, `typescript-config`, and `shadcn-ui` packages
+* **Handles AI components**: Special logic for the `ai` package to create individual registry entries
+* **Generates descriptions**: Maps component names to meaningful descriptions
+* **Creates proper schema**: Follows the official shadcn/ui registry format
 
 #### Adding New Components
 
@@ -221,8 +226,8 @@ When you add new components:
 
 The automated process creates:
 
-- `registry.json` - Main registry file with all component metadata
-- `public/r/[component].json` - Individual component files for CLI consumption
+* `registry.json` - Main registry file with all component metadata
+* `public/r/[component].json` - Individual component files for CLI consumption
 
 ### Registry File Structure
 
@@ -251,11 +256,11 @@ The `scripts/generateRegistry.ts` file is the heart of the automated registry sy
 
 #### Script Features
 
-- **Automatic Package Discovery**: Scans the `packages/` directory for all subdirectories
-- **Component File Detection**: Identifies `.ts` and `.tsx` files while excluding test files
-- **Smart AI Component Handling**: Creates individual registry entries for each file in the `ai` package
-- **Description Mapping**: Uses a predefined dictionary to provide meaningful component descriptions
-- **Proper Schema Generation**: Creates registry files that comply with shadcn/ui standards
+* **Automatic Package Discovery**: Scans the `packages/` directory for all subdirectories
+* **Component File Detection**: Identifies `.ts` and `.tsx` files while excluding test files
+* **Smart AI Component Handling**: Creates individual registry entries for each file in the `ai` package
+* **Description Mapping**: Uses a predefined dictionary to provide meaningful component descriptions
+* **Proper Schema Generation**: Creates registry files that comply with shadcn/ui standards
 
 #### Customizing the Script
 
@@ -439,31 +444,34 @@ pnpm validate:registry
 | `pnpm publish:patch/minor/major` | Version bump and publish |
 | `pnpm lint` | Lint codebase |
 | `pnpm format` | Format code |
-| `pnpm clean` | Clean node_modules and build artifacts |
+| `pnpm clean` | Clean node\_modules and build artifacts |
 | `pnpm bump-deps` | Update all dependencies |
 | `pnpm bump-ui` | Update shadcn/ui components |
 
 ## 🎯 Best Practices
 
 ### Component Development
-- **Follow shadcn/ui patterns** for consistency
-- **Use TypeScript** for type safety
-- **Include proper prop interfaces** and documentation
-- **Add examples** in your documentation
-- **Test components** thoroughly before publishing
+
+* **Follow shadcn/ui patterns** for consistency
+* **Use TypeScript** for type safety
+* **Include proper prop interfaces** and documentation
+* **Add examples** in your documentation
+* **Test components** thoroughly before publishing
 
 ### Registry Management
-- **Run `pnpm run registry`** after adding new components to regenerate the complete registry
-- **Update component descriptions** in `scripts/generateRegistry.ts` for new components
-- **Test the CLI** with `pnpm run test:cli` before publishing
-- **Version components** appropriately using semantic versioning
-- **Document breaking changes** in release notes
+
+* **Run `pnpm run registry`** after adding new components to regenerate the complete registry
+* **Update component descriptions** in `scripts/generateRegistry.ts` for new components
+* **Test the CLI** with `pnpm run test:cli` before publishing
+* **Version components** appropriately using semantic versioning
+* **Document breaking changes** in release notes
 
 ### CLI Distribution
-- **Test CLI locally** before publishing
-- **Follow semantic versioning** for releases
-- **Provide clear error messages** for users
-- **Include helpful documentation** and examples
+
+* **Test CLI locally** before publishing
+* **Follow semantic versioning** for releases
+* **Provide clear error messages** for users
+* **Include helpful documentation** and examples
 
 ## 🤝 Contributing
 
@@ -472,7 +480,7 @@ Contributions are welcome! Please read our contributing guidelines and submit pu
 ### Development Setup
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/your-username/design-registry-starter.git`
+2. Clone your fork: `git clone https://github.com/your-username/devcn-ui.git`
 3. Install dependencies: `pnpm install`
 4. Create a feature branch: `git checkout -b feature/amazing-feature`
 5. Make your changes and test thoroughly
@@ -484,13 +492,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🔗 Resources
 
-- **[shadcn/ui](https://ui.shadcn.com)** - Original inspiration and compatibility target
-- **[Turborepo](https://turbo.build)** - Monorepo build system
-- **[Next.js](https://nextjs.org)** - Documentation framework
-- **[Tailwind CSS](https://tailwindcss.com)** - Styling framework
-- **[Radix UI](https://radix-ui.com)** - Primitive components
+* **[shadcn/ui](https://ui.shadcn.com)** - Original inspiration and compatibility target
+* **[Turborepo](https://turbo.build)** - Monorepo build system
+* **[Next.js](https://nextjs.org)** - Documentation framework
+* **[Tailwind CSS](https://tailwindcss.com)** - Styling framework
+* **[Radix UI](https://radix-ui.com)** - Primitive components
 
----
+***
 
 **Ready to build your own component registry?** 🚀
 

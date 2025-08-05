@@ -20,12 +20,12 @@ type InstallerProps = {
 };
 
 export const Installer = ({ packageName }: InstallerProps) => {
-  const [value, setValue] = useState('devcn-ui');
+  const [value, setValue] = useState('devcn');
 
   const commands = {
-    'devcn-ui': {
+    'devcn': {
       image: devcn,
-      code: `npx devcn-ui@latest add ${packageName}`,
+      code: `npx devcn@latest add ${packageName}`,
     },
     shadcn: {
       image: shadcn,

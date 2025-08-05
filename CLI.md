@@ -7,7 +7,7 @@ A command-line interface for adding components from the Devcn UI Design Registry
 You don't need to install the CLI globally. Use it directly with `npx`:
 
 ```bash
-npx devcn-ui add button
+npx devcn add button
 ```
 
 ## Usage
@@ -17,13 +17,13 @@ npx devcn-ui add button
 Add a single component:
 
 ```bash
-npx devcn-ui add button
+npx devcn add button
 ```
 
 Add multiple components:
 
 ```bash
-npx devcn-ui add button card dialog
+npx devcn add button card dialog
 ```
 
 ### Help
@@ -31,21 +31,22 @@ npx devcn-ui add button card dialog
 Show help information:
 
 ```bash
-npx devcn-ui --help
+npx devcn --help
 ```
 
 The help command will show all available commands including:
-- `add` - Add components to your project
-- `list` (or `ls`) - List all available components
-- `--version` - Show version information
-- `--help` - Show help information
+
+* `add` - Add components to your project
+* `list` (or `ls`) - List all available components
+* `--version` - Show version information
+* `--help` - Show help information
 
 ### Version
 
 Show version information:
 
 ```bash
-npx devcn-ui --version
+npx devcn --version
 ```
 
 ### List Components
@@ -53,15 +54,17 @@ npx devcn-ui --version
 List all available components in the registry:
 
 ```bash
-npx devcn-ui list
+npx devcn list
 ```
 
 This command will display:
-- Component names
-- Brief descriptions
-- Component types (AI, utility, etc.)
+
+* Component names
+* Brief descriptions
+* Component types (AI, utility, etc.)
 
 Example output:
+
 ```
 Available components:
 
@@ -85,15 +88,15 @@ Available components:
 You can also use the short alias:
 
 ```bash
-npx devcn-ui ls
+npx devcn ls
 ```
 
 ## Available Components
 
 You can view all available components in two ways:
 
-1. **Using the CLI**: Run `npx devcn-ui list` to see all components with descriptions
-2. **Online**: Visit <https://devcn-ui.dedevs.com> to browse components with live examples and documentation
+1. **Using the CLI**: Run `npx devcn list` to see all components with descriptions
+2. **Online**: Visit <https://devcn.dedevs.com> to browse components with live examples and documentation
 
 ## How It Works
 
@@ -117,7 +120,7 @@ The CLI uses the [shadcn/ui CLI](https://ui.shadcn.com) under the hood to instal
 If you get a "component not found" error, make sure:
 
 * The component name is spelled correctly
-* The component exists in our registry (use `npx devcn-ui list` to see all available components)
+* The component exists in our registry (use `npx devcn list` to see all available components)
 * You have an internet connection
 
 ### Permission Errors
@@ -133,15 +136,15 @@ If you encounter permission errors, try:
 If the `list` command doesn't work or shows no components:
 
 * Check your internet connection
-* Ensure access to `devcn-ui.dedevs.com`
-* Try running `npx devcn-ui@latest list` to use the latest version
+* Ensure access to `devcn.dedevs.com`
+* Try running `npx devcn@latest list` to use the latest version
 
 ### Network Issues
 
 If you're behind a corporate firewall:
 
 * Check your proxy settings
-* Ensure access to `registry.npmjs.org` and `devcn-ui.dedevs.com`
+* Ensure access to `registry.npmjs.org` and `devcn.dedevs.com`
 
 ## Development
 

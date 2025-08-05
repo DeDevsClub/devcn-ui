@@ -1,7 +1,7 @@
 {
-  "name": "devcn-ui",
+  "name": "devcn",
   "description": "Devcn UI Design Registry - Beautiful, accessible components built with React and Tailwind CSS",
-  "url": "https://devcn-ui.dedevs.com",
+  "url": "https://devcn.dedevs.com",
   "components": [
     {
       "name": "accordion",

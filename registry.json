@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "devcn-ui",
-  "homepage": "https://devcn-ui.dedevs.com",
+  "name": "devcn",
+  "homepage": "https://devcn.dedevs.com",
   "items": [
     {
       "name": "ai-branch",

@@ -9,7 +9,7 @@ const getGitHubData = unstable_cache(
     try {
       const { data } = await octokit.rest.repos.get({
         owner: 'DeDevsClub',
-        repo: 'design-registry-starter',
+        repo: 'devcn-ui',
       });
       return {
         stars: data.stargazers_count,

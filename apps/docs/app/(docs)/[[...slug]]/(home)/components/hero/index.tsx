@@ -100,7 +100,7 @@ export const Hero = () => (
         <div className="mx-auto max-w-4xl text-center">
           <p className="mt-0 mb-0 text-muted-foreground lg:text-lg xl:text-xl 2xl:text-2xl">
             {
-              'Devcn UI is a custom registry of composable, accessible and extensible components designed for use with shadcn/ui. \nFree and [open source](https://github.com/DeDevsClub/design-registry-starter), forever and made possible by the DeDevsClub community and the efforts of HaydenBleasel of [Kibo UI](https://github.com/HaydenBleasel/kibo).'
+              'Devcn UI is a custom registry of composable, accessible and extensible components designed for use with shadcn/ui. \nFree and [open source](https://github.com/DeDevsClub/devcn-ui), forever and made possible by the DeDevsClub community and the efforts of HaydenBleasel of [Kibo UI](https://github.com/HaydenBleasel/kibo).'
             }
           </p>
         </div>

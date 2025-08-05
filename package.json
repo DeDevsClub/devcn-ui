@@ -1,5 +1,5 @@
 {
-  "name": "devcn-ui",
+  "name": "devcn",
   "version": "0.0.5",
   "description": "CLI tool for adding components from the Devcn UI Design Registry",
   "keywords": [
@@ -12,19 +12,19 @@
   ],
   "author": "DeDevsClub",
   "license": "MIT",
-  "homepage": "https://devcn-ui.dedevs.com",
+  "homepage": "https://devcn.dedevs.com",
   "bugs": {
-    "url": "https://github.com/DeDevsClub/design-registry-starter/issues"
+    "url": "https://github.com/DeDevsClub/devcn-ui/issues"
   },
   "bin": {
-    "devcn-ui": "dist/index.js"
+    "devcn": "dist/index.js"
   },
   "files": [
     "dist/index.js"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/DeDevsClub/design-registry-starter.git"
+    "url": "https://github.com/DeDevsClub/devcn-ui.git"
   },
   "scripts": {
     "build": "turbo build",

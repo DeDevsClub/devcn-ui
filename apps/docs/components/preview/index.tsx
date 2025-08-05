@@ -26,7 +26,7 @@ export const Preview = async ({
   type = 'component',
 }: PreviewProps) => {
   const filePath = join(process.cwd(), 'examples', `${path}.tsx`);
-  
+
   // Check if the example file exists
   if (!existsSync(filePath)) {
     return (
@@ -36,7 +36,7 @@ export const Preview = async ({
       </div>
     );
   }
-  
+
   const code = await readFile(filePath, 'utf-8');
 
   let Component;
@@ -55,12 +55,12 @@ export const Preview = async ({
 
   const parsedCode = code
     .replace(/@repo\/shadcn-ui\//g, '@/')
-    .replace(/@repo\//g, '@/components/ui/devcn-ui/');
+    .replace(/@repo\//g, '@/components/ui/devcn/');
 
   const sourceComponentNames =
     parsedCode
-      .match(/@\/components\/ui\/devcn-ui\/([^'"`]+)/g)
-      ?.map((match) => match.replace('@/components/ui/devcn-ui/', '')) || [];
+      .match(/@\/components\/ui\/devcn\/([^'"`]+)/g)
+      ?.map((match) => match.replace('@/components/ui/devcn/', '')) || [];
 
   const sourceComponents: { name: string; source: string }[] = [];
 

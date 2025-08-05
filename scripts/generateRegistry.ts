@@ -152,8 +152,8 @@ async function generateRegistry(): Promise<void> {
         // Create the registry object
         const registry: Registry = {
             $schema: 'https://ui.shadcn.com/schema/registry.json',
-            name: 'devcn-ui',
-            homepage: 'https://devcn-ui.dedevs.com',
+            name: 'devcn',
+            homepage: 'https://devcn.dedevs.com',
             items: allItems
         };
 

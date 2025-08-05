@@ -34,12 +34,12 @@ Copy and paste this configuration into your MCP config file:
 ```json
 {
   "mcpServers": {
-    "devcn-ui": {
+    "devcn": {
       "command": "npx",
       "args": [
         "-y",
         "mcp-remote",
-        "https://devcn-ui.dedevs.com/api/mcp/mcp"
+        "https://devcn.dedevs.com/api/mcp/mcp"
       ]
     }
   }
@@ -65,9 +65,9 @@ You can use Devcn UI Design Registry alongside other MCP servers:
 ```json
 {
   "mcpServers": {
-    "devcn-ui": {
+    "devcn": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://devcn-ui.dedevs.com/api/mcp/mcp"]
+      "args": ["-y", "mcp-remote", "https://devcn.dedevs.com/api/mcp/mcp"]
     },
     "github": {
       "command": "npx",

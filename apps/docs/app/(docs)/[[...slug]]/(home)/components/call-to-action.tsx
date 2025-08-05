@@ -25,7 +25,7 @@ const Terminal = () => (
     <div className="h-[10rem] bg-background p-6 sm:h-[20rem]">
       <div className="flex items-center font-mono text-base">
         <code className="mr-2 text-blue-600 dark:text-blue-400">$</code>
-        <code className="text-muted-foreground">npx devcn-ui add&nbsp;</code>
+        <code className="text-muted-foreground">npx devcn add&nbsp;</code>
         <TextLoop>
           {components.map((component) => (
             <span className="text-accent-foreground" key={component}>

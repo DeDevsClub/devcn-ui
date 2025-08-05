@@ -19,7 +19,7 @@ export const baseOptions: BaseLayoutProps = {
       active: 'nested-url',
     },
   ],
-  githubUrl: 'https://github.com/DeDevsClub/design-registry-starter',
+  githubUrl: 'https://github.com/DeDevsClub/devcn-ui',
   nav: {
     title: (
       <div className="flex items-center gap-2 rounded-md border border-border p-2 hover:bg-muted/60">

@@ -49,7 +49,7 @@ export const getPackage = async (packageName: string) => {
         type: 'registry:ui',
         path: file.name,
         content,
-        target: `components/ui/devcn-ui/${packageName}/${file.name}`,
+        target: `components/ui/devcn/${packageName}/${file.name}`,
       };
     })
   );
@@ -68,13 +68,13 @@ export const getPackage = async (packageName: string) => {
     const packageName = dep.replace('@repo/', '');
 
     registryDependencies.push(
-      `https://devcn-ui.dedevs.com/registry/${packageName}.json`
+      `https://devcn.dedevs.com/registry/${packageName}.json`
     );
   }
 
   const response = {
     $schema: 'https://ui.shadcn.com/schema/registry.json',
-    homepage: `https://devcn-ui.dedevs.com/components/${packageName}`,
+    homepage: `https://devcn.dedevs.com/components/${packageName}`,
     name: packageName,
     type: 'registry:ui',
     author: 'DeSwarm <admin@dedevs.com>',
